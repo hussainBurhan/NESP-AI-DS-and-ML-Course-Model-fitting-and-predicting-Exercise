@@ -31,6 +31,11 @@ clf = RandomForestClassifier().fit(x_train, y_train)
 # Predicting the target variable
 y_predicted = clf.predict(x_test)
 
+# predicting probability
+predicted_proba = clf.predict_proba(x_test)[:5]
+print('predicted probability:')
+print(predicted_proba)
+
 # Printing the predicted values
 print('y_predicted:')
 print(y_predicted)
